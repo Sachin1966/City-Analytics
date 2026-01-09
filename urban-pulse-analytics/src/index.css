@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Urban Pulse Analytics Design System */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary: Deep Slate Blue - Professional & Trustworthy */
+    --primary: 215 50% 23%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary: Muted Teal - Growth & Insight */
+    --secondary: 175 35% 92%;
+    --secondary-foreground: 175 40% 25%;
+
+    /* Muted surfaces */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent: Warm Amber - Highlights & Actions */
+    --accent: 38 92% 50%;
+    --accent-foreground: 38 95% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 20% 91%;
+    --input: 214 20% 91%;
+    --ring: 215 50% 23%;
+
+    --radius: 0.625rem;
+
+    /* Custom Analytics Colors */
+    --success: 152 55% 45%;
+    --success-foreground: 152 55% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 95% 15%;
+    --info: 205 85% 50%;
+    --info-foreground: 205 85% 98%;
+
+    /* Chart Colors - Harmonious Analytics Palette */
+    --chart-1: 215 50% 35%;
+    --chart-2: 175 45% 45%;
+    --chart-3: 38 75% 55%;
+    --chart-4: 280 35% 50%;
+    --chart-5: 0 55% 55%;
+    --chart-6: 145 45% 45%;
+
+    /* Gradient definitions */
+    --gradient-hero: linear-gradient(135deg, hsl(215 50% 23%) 0%, hsl(215 45% 35%) 50%, hsl(175 35% 40%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(30 90% 55%) 100%);
+    --gradient-insight: linear-gradient(135deg, hsl(175 35% 45%) 0%, hsl(175 40% 55%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.03);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 15% / 0.05), 0 2px 4px -2px hsl(215 25% 15% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 15% / 0.08), 0 4px 6px -4px hsl(215 25% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(215 25% 15% / 0.1), 0 8px 10px -6px hsl(215 25% 15% / 0.08);
+    --shadow-card: 0 1px 3px hsl(215 25% 15% / 0.04), 0 4px 12px hsl(215 25% 15% / 0.06);
+    --shadow-card-hover: 0 4px 12px hsl(215 25% 15% / 0.08), 0 8px 24px hsl(215 25% 15% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 25% 9%;
+    --foreground: 210 20% 95%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 205 85% 60%;
+    --primary-foreground: 215 25% 9%;
+
+    --secondary: 175 30% 18%;
+    --secondary-foreground: 175 35% 85%;
+
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 38 85% 55%;
+    --accent-foreground: 38 95% 10%;
+
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 205 85% 60%;
+
+    --success: 152 50% 50%;
+    --warning: 38 85% 55%;
+    --info: 205 80% 55%;
+
+    --chart-1: 205 85% 60%;
+    --chart-2: 175 45% 55%;
+    --chart-3: 38 80% 60%;
+    --chart-4: 280 40% 60%;
+    --chart-5: 0 60% 60%;
+    --chart-6: 145 50% 55%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(215 30% 12%) 0%, hsl(215 35% 20%) 50%, hsl(175 25% 25%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(215 25% 14%) 0%, hsl(215 25% 10%) 100%);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Analytics Card Styles */
+  .analytics-card {
+    @apply bg-card rounded-xl border border-border/50 transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .analytics-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    @apply border-border;
+  }
+
+  /* KPI Card */
+  .kpi-card {
+    @apply analytics-card p-6 relative overflow-hidden;
+  }
+
+  .kpi-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-1 h-full;
+    background: var(--gradient-accent);
+  }
+
+  /* Insight Card */
+  .insight-card {
+    @apply analytics-card p-5 border-l-4 border-l-accent;
+  }
+
+  /* Hero Section */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Chart Container */
+  .chart-container {
+    @apply analytics-card p-6;
+  }
+
+  /* Data Table Styles */
+  .data-table {
+    @apply w-full text-sm;
+  }
+
+  .data-table th {
+    @apply text-left font-medium text-muted-foreground uppercase text-xs tracking-wider py-3 px-4 border-b;
+  }
+
+  .data-table td {
+    @apply py-3 px-4 border-b border-border/50;
+  }
+
+  .data-table tr:hover td {
+    @apply bg-muted/50;
+  }
+
+  /* Metric Badge */
+  .metric-badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+
+  .metric-badge-positive {
+    @apply bg-success/10 text-success;
+  }
+
+  .metric-badge-negative {
+    @apply bg-destructive/10 text-destructive;
+  }
+
+  .metric-badge-neutral {
+    @apply bg-muted text-muted-foreground;
+  }
+
+  /* Navigation */
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-muted-foreground transition-all duration-200;
+  }
+
+  .nav-item:hover {
+    @apply bg-muted text-foreground;
+  }
+
+  .nav-item.active {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  /* Slider Track */
+  .weight-slider {
+    @apply w-full h-2 bg-muted rounded-full appearance-none cursor-pointer;
+  }
+
+  /* Map Placeholder */
+  .map-container {
+    @apply relative rounded-xl overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/10;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+}
+
+@layer utilities {
+  /* Text Gradients */
+  .text-gradient-hero {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  /* Fade animations */
+  .fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger children */
+  .stagger-children > * {
+    @apply fade-in;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+
+  /* Pulse animation for live indicators */
+  .pulse-dot {
+    @apply relative;
+  }
+
+  .pulse-dot::before {
+    content: '';
+    @apply absolute inset-0 rounded-full bg-current animate-ping opacity-75;
+  }
+}
