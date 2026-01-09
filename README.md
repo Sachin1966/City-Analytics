@@ -2,9 +2,6 @@
 
 **Urban Pulse** is a comprehensive analytics dashboard designed for urban planners, data scientists, and government officials to visualize, compare, and analyze quality of life metrics across global cities.
 
-![Project Status](https://img.shields.io/badge/Status-Active-success)
-![Version](https://img.shields.io/badge/Version-2.4.0--stable-blue)
-
 ## 🚀 Key Features
 
 ### 1. **Interactive Dashboard**
