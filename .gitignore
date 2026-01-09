@@ -1,0 +1,27 @@
+# System & Environment
+.env
+.venv/
+env/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+
+# Node / Frontend
+node_modules/
+dist/
+coverage/
+urban-pulse-analytics/node_modules/
+urban-pulse-analytics/dist/
+
+# Backend
+urban-pulse-backend/__pycache__/
+urban-pulse-backend/.venv/
+
+# Large Data
+# (User asked for all files, but generally we avoid massive datasets. 
+# Detailed CSVs in 'dataset/' are small enough to keep if they are core to the code.)
